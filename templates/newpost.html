@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>New Blog Post</h1>
+        <form method='POST' action='/newpost'>
+        <table>
+            <tr>
+                <td><label>
+                    New Post:
+                    <input type="text" name="title" />
+            </label></td>
+            </tr>
+            <tr>
+                <td><label>
+                    Post Body:
+                    <input type="text" name="body" style="height:100px; width:300px;" />
+                </label></td>
+            </tr>
+        </table>
+            <input type="submit" value="Add post!" />
+        </form>
+
+    
+{% endblock %}
+            
