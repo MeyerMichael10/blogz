@@ -34,7 +34,7 @@ def newpost():
         db.session.add(new_post)
         db.session.commit()
         
-        return redirect('/blog')
+        return redirect('/blog?id={0}'.format(new_post.id))
 
 
     return render_template('newpost.html')
@@ -42,6 +42,8 @@ def newpost():
 
 @app.route('/blog', methods=['GET', 'POST'])
 def view_blog():
+   
+    
     if 'id' in request.args:
         blog_id = request.args.get('id')
         blog = Blog.query.get(blog_id)
@@ -49,6 +51,7 @@ def view_blog():
         return render_template('viewblog.html', blog_id=id, blog=blog)
 
     else:
+        
         blogs = Blog.query.all()
         title = Blog.query.get('title')
         body = Blog.query.get('body')
