@@ -40,7 +40,7 @@ def newpost():
     return render_template('newpost.html')
 
 
-@app.route('/blog', methods=['GET', 'POST'])
+@app.route('/blog',strict_slashes=False)
 def view_blog():
    
     
