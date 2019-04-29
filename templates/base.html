@@ -2,15 +2,12 @@
 <html>
     <head>
         <title>{{title}}</title>
-        <style>
-            .error {
-                color: red;
-            }
-        </style>
+        <link href="{{ url_for('static',filename='styles/reset.css') }}" type="text/css" rel="stylesheet" /> 
+        <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static',filename='styles/stylesheet.css') }}" />
     </head>
 <header>
-    <a href='/newpost'>New Post</a>
-    <a href='/blog'>View All Posts</a>
+    <a href='/newpost' class='nav_button'>New Post</a>
+    <a href='/blog' class='nav_button'>View All Posts</a>
 
     {% with messages = get_flashed_messages(with_categories=True) %}
         {% for category, message in messages %}
