@@ -4,12 +4,12 @@
        
         <h1>Blogs</h1>
             {% for post in posts %}
-                <div>    
-                    <a href='/blog?id={{post.id}}'><h2>{{post.title}}</h2></a>
-                    <p>{{post.body}}</p>
+                <div id='blog_post'>    
+                   <h2> <a href='/blog?id={{post.id}}' id='blog_title'>{{post.title}}</a></h2>
+                    <p id='blog_body'>{{post.body}}</p>
                     
                        
-                            <p>Written by <a href='/blog?user={{post.owner_id}}'>{{post.owner}}</a></p>
+                            <p id='written_by'>Written by <a href='/blog?user={{post.owner_id}}'>{{post.owner}}</a></p>
                     
                 </div>    
         {% endfor %}

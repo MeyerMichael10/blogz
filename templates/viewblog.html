@@ -3,5 +3,5 @@
 {% block content %}
 <h3 id='viewpost_title'>{{blog.title}}</h3>
 <p id='viewpost_body'>{{blog.body}}</p>
-<p>Written by <a href='/blog?user={{blog.owner_id}}'>{{blog.owner}}</a></p>
+<p id='written_by'>Written by <a href='/blog?user={{blog.owner_id}}'>{{blog.owner}}</a></p>
 {% endblock %}

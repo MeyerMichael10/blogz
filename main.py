@@ -101,7 +101,6 @@ def login():
                 return redirect('/newpost')
             else:
                 flash('Password is incorrect', 'error')
-                print(user.pw_hash)
         else:
             flash('User does not exist', 'error')
 
@@ -125,7 +124,8 @@ def signup():
             return redirect('/newpost')
         else:
             # TODO - better response message
-            return '<h1>Duplicate user</h1>'
+            flash("That user already exists!", "error")
+            return redirect('/signup')
     return render_template('signup.html')
 
 @app.route('/')
