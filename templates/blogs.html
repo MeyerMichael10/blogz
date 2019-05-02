@@ -2,7 +2,8 @@
 
 {% block content %}
        
-        <h1>Blogs</h1>
+        <h1 id='page_title'>Blogs</h1>
+        <hr>
             {% for post in posts %}
                 <div id='blog_post'>    
                    <h2> <a href='/blog?id={{post.id}}' id='blog_title'>{{post.title}}</a></h2>
@@ -10,7 +11,8 @@
                     
                        
                             <p id='written_by'>Written by <a href='/blog?user={{post.owner_id}}'>{{post.owner}}</a></p>
-                    
-                </div>    
+
+                </div>
+                <hr>    
         {% endfor %}
 {% endblock %}

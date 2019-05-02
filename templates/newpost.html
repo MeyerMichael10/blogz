@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>New Blog Post</h1>
+    <h1 id='page_title'>New Blog Post</h1>
+
+    <hr>
+
         <form method='POST' action='/newpost'>
         <table>
             <tr>
@@ -13,7 +16,7 @@
             <tr>
                 <td><label>
                     Post Body:
-                    <textarea rows="10" cols="50" name="body"></textarea>
+                    <textarea rows="8" cols="40" name="body"></textarea>
                 </label></td>
             </tr>
         </table>

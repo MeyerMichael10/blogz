@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Log in!</h1>
+<h1 id='page_title'>Log in!</h1>
+<hr>
 <p>If you don't have an account, you may <a href="/signup">register</a> for one</p>
+<hr>
 <form action="/login" method="post">
     <table>
         <tr>
@@ -19,5 +21,6 @@
         </tr>
     </table>
     <input type="submit" value="Login">
+    
 </form>
 {% endblock %}

@@ -103,7 +103,8 @@ def login():
                 flash('Password is incorrect', 'error')
         else:
             flash('User does not exist', 'error')
-
+    
+    
     return render_template('login.html')
 
 @app.route('/signup', methods=['POST', 'GET'])
